@@ -84,11 +84,6 @@ export default function App() {
   const tasksRef = useRef<UploadTask[]>([]);
   const timers = useRef<Record<string, number>>({});
 
-  function pickFiles(kind: UploadKind = selectedKind) {
-    setSelectedKind(kind);
-    window.setTimeout(() => fileInputRef.current?.click(), 0);
-  }
-
   useEffect(() => {
     tasksRef.current = tasks;
   }, [tasks]);
@@ -470,7 +465,6 @@ export default function App() {
         <UploadPanel
           selectedKind={selectedKind}
           onSelect={setSelectedKind}
-          onPickFiles={pickFiles}
           onRecover={recoverTasks}
         />
 

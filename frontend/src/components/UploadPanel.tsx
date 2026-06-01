@@ -21,11 +21,10 @@ export const uploadActions: UploadAction[] = [
 interface UploadPanelProps {
   selectedKind: UploadKind;
   onSelect: (kind: UploadKind) => void;
-  onPickFiles: (kind?: UploadKind) => void;
   onRecover: () => void;
 }
 
-export function UploadPanel({ selectedKind, onSelect, onPickFiles, onRecover }: UploadPanelProps) {
+export function UploadPanel({ selectedKind, onSelect, onRecover }: UploadPanelProps) {
   return (
     <aside className="space-y-3">
       <div className="rounded-lg border border-white/80 bg-white/90 p-4 shadow-soft">
@@ -40,7 +39,6 @@ export function UploadPanel({ selectedKind, onSelect, onPickFiles, onRecover }: 
             const handleClick = () => {
               onSelect(action.kind);
               if (action.kind === "resume") onRecover();
-              else onPickFiles(action.kind);
             };
             return (
               <button
