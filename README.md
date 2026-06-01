@@ -1,6 +1,6 @@
 # CloudFile
 
-CloudFile 是一个按照 `项目介绍.md` 中“云端大文件上传与异步处理调度平台”实现的 Go/Gin 后端示例，覆盖：
+CloudFile 是一个云端大文件上传与异步处理调度平台覆盖：
 
 - 上传初始化与秒传校验
 - 分片上传、幂等记录、断点续传
@@ -60,9 +60,7 @@ Go 后端主目录为 `backend/`：
 - `GET /api/media-tasks/{task_id}` 查询媒体处理任务
 - `POST /api/admin/compensate` 执行异常任务补偿
 
-## 验证
 
-当前目录仍保留早期 Python 参考实现，但 Docker 和 README 已切换到 Go/Gin 后端。
 
 ## 前端控制台
 
