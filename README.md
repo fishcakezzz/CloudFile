@@ -221,14 +221,4 @@ frontend/
   src/mockApi.ts               real API client used by the demo
 ```
 
-## Screenshots
 
-图片文件建议放在以下路径：
-
-```text
-docs/images/demo-dashboard-empty.png
-docs/images/demo-image-upload-complete.png
-docs/images/demo-instant-upload.png
-docs/images/demo-archive-uploading.png
-docs/images/demo-archive-complete.png
-```
